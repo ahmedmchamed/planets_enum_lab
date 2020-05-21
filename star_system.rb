@@ -50,13 +50,19 @@ class StarSystem
     return total_moons
   end
 
-  # def get_planet_names_sorted_by_increasing_distance_from_sun
-    
-  # end
+  def get_planet_names_sorted_by_increasing_distance_from_sun
+    result = []
+    biggest_planets = planets.sort_by { |planet| planet.distance_from_sun }
+    biggest_planets.each { |planet| result.push(planet.name) }
+    return result
+  end
 
-  # def get_planet_names_sorted_by_size_decreasing
-
-  # end
+  def get_planet_names_sorted_by_size_decreasing
+    result = []
+    assorted_planets = planets.sort_by { |planet| planet.diameter }
+    assorted_planets.reverse_each { |planet| result.push(planet.name) }
+    return result
+  end
 
 end
 

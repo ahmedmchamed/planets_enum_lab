@@ -75,13 +75,11 @@ class TestStarSystem < Minitest::Test
   end
   
   def test_planet_names_sorted_by_increasing_distance_from_sun
-    skip
     expected_names = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"]
     assert_equal(expected_names, @solar_system.get_planet_names_sorted_by_increasing_distance_from_sun)
   end
   
   def test_planet_names_sorted_by_size_decreasing
-    skip
     expected_names = ["Jupiter", "Saturn", "Uranus", "Neptune", "Earth", "Venus", "Mars", "Mercury", "Pluto"]
     assert_equal(expected_names, @solar_system.get_planet_names_sorted_by_size_decreasing)
   end
